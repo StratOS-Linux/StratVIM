@@ -1,6 +1,6 @@
 <img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo" data-align="center">
 
-# LUGOS-nvim-config
+# Neovim config for LUGOS
 
 ## About
 
