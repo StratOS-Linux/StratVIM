@@ -34,3 +34,4 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.cmd.colorscheme('tokyonight')
 vim.opt.showmode = false;
+
