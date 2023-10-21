@@ -16,9 +16,7 @@ return{
 	end,
 },
  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+     "nyoom-engineering/oxocarbon.nvim",
   },
   {
     "nvim-tree/nvim-web-devicons",
@@ -29,29 +27,7 @@ return{
   {
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-      -- config
-      config = {
-  header ={
-  "██      ██    ██  ██████  ██    ██ ██ ███    ███",
-  "██      ██    ██ ██       ██    ██ ██ ████  ████",
-  "██      ██    ██ ██   ███ ██    ██ ██ ██ ████ ██",
-  "██      ██    ██ ██    ██  ██  ██  ██ ██  ██  ██",
-  "███████  ██████   ██████    ████   ██ ██      ██",
-  ""
-  },-- type is table def
-  hide={
-	  shortcuts,
-	  tabline,
-	  winbar
-  },
-  footer = {"","","Made with ♥  by LUGVITC"}
 
-}
-
-    }
-  end,
   dependencies = { {'nvim-tree/nvim-web-devicons'}}
 },
 
@@ -88,7 +64,7 @@ return{
     } end,
   },
     {
-    "nvim-telescope/telescope.nvim",
+    "nvim-telescope/telescope.nvim", -- TODO : Add extra keybindings
     lazy = false,
     config = function()
     end,
@@ -108,10 +84,6 @@ return{
 	    require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
 }
@@ -123,6 +95,33 @@ return{
       "RRethy/nvim-treesitter-textsubjects",
     },
   },
+  {
+	  "hrsh7th/nvim-cmp", -- TODO : Work on nvim completions
+ 	  event = "InsertEnter",
+	    dependencies = {
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-calc",
+      "saadparwaiz1/cmp_luasnip",
+      "L3MON4D3/LuaSnip",
+      "rafamadriz/friendly-snippets",
+      },
+  },
+  {
+    "nvim-telescope/telescope-file-browser.nvim", -- TODO : Not working. Yet to fix.
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+	    vim.api.nvim_set_keymap(
+  "n",
+  "<space>t",
+  ":Telescope file_browser<CR>",
+  { noremap = true }
+)
+    end
+},
 }
 
 

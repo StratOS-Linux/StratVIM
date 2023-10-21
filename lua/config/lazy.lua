@@ -32,6 +32,10 @@ require("lazy").setup("config.plugins", {
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('tokyonight')
+vim.opt.background = "dark"
+vim.cmd.colorscheme('oxocarbon')
 vim.opt.showmode = false;
-
+require('lualine').setup()
+require "config.options"
+require ("config.dashboard-config")
+require "config.cmp"
