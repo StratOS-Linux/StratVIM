@@ -1,7 +1,10 @@
-<img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo" data-align="center">
+<img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo" align="center">
 
 # LUGVIM
 
+## Screenshots
+
+### Dashboard
 <img src="images/LUGVIM.png">
 
 ## About
