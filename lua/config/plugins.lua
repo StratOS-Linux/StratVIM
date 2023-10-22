@@ -122,6 +122,36 @@ return{
 )
     end
 },
+{
+	"itmecho/neoterm.nvim",
+	config=function()
+		require('neoterm').setup({
+			clear_on_run = true,
+			mode = 'horizontal',
+			noinsert = false
+		})
+	end,
+	 keys = {
+      { "<C-t>", "<cmd>lua require('neoterm').toggle()<CR>", desc = "Neoterm" },
+    },
+},
+{
+  "NeogitOrg/neogit",
+  dependencies = {
+    "nvim-lua/plenary.nvim",         -- required
+    "nvim-telescope/telescope.nvim", -- optional
+    "sindrets/diffview.nvim",        -- optional
+    "ibhagwan/fzf-lua",              -- optional
+  },
+  config = function()
+	  -- init.lua
+	local neogit = require('neogit')
+	neogit.setup {}
+   end,
+   cmd = {
+	   'Neogit'
+   },
+},
 }
 
 
