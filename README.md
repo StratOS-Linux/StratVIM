@@ -27,6 +27,6 @@
 
 - Dashboard made using [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim)
 
-- Terminal support in nvim using [neoterm.nvim](https://github.com/itmecho/neoterm.nvim)
+- Terminal support in nvim using [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 
 - And much more !
