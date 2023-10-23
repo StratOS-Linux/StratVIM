@@ -33,7 +33,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
-vim.cmd.colorscheme('oxocarbon')
+ vim.cmd.colorscheme('oxocarbon')
 vim.opt.showmode = false;
 require('lualine').setup()
 require "config.options"
