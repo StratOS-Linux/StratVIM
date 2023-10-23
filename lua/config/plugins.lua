@@ -3,7 +3,7 @@ return{
     "nvim-tree/nvim-tree.lua",
     cmd = {
       "NvimTreeOpen",
-      "NvimTreeClose",
+     "NvimTreeClose",
       "NvimTreeToggle",
       "NvimTreeFindFile",
       "NvimTreeFindFileToggle",
@@ -15,6 +15,7 @@ return{
 	    require("nvim-tree").setup()
 	end,
 },
+
  {
      "nyoom-engineering/oxocarbon.nvim",
   },
@@ -122,19 +123,7 @@ return{
 )
     end
 },
-{
-	"itmecho/neoterm.nvim",
-	config=function()
-		require('neoterm').setup({
-			clear_on_run = true,
-			mode = 'horizontal',
-			noinsert = false
-		})
-	end,
-	 keys = {
-      { "<C-t>", "<cmd>lua require('neoterm').toggle()<CR>", desc = "Neoterm" },
-    },
-},
+
 {
   "NeogitOrg/neogit",
   dependencies = {
@@ -152,6 +141,84 @@ return{
 	   'Neogit'
    },
 },
+ {'akinsho/toggleterm.nvim',
+ config = function()
+		require("toggleterm").setup{
+			direction = 'float',
+			border = 'single'
+		}
+	end,
+	cmd = {
+      "ToggleTerm",
+      "TermExec",
+      "ToggleTermToggleAll",
+      "ToggleTermSendCurrentLine",
+      "ToggleTermSendVisualLines",
+      "ToggleTermSendVisualSelection",
+    },	 keys = {
+      { "<C-t>", "<cmd>lua require('toggleterm').toggle()<CR>", desc = "Toggle Terminal Window" },
+    },
+ },
+--  {
+--       'https://gitlab.com/HiPhish/rainbow-delimiters.nvim',
+--       config = function()
+--         local colors = {
+--           Red = '#EF6D6D',
+--           Orange = '#FFA645',
+--           Yellow = '#EDEF56',
+--           Green = '#6AEF6F',
+--           Cyan = '#78E6EF',
+--           Blue = '#70A4FF',
+--           Violet = '#BDB2EF',
+--         }
+--         require('pynappo.theme').set_rainbow_colors('RainbowDelimiter', colors) -- just a helper function that sets the highlights with the given prefix
+--         local rainbow_delimiters = require('rainbow-delimiters')
+--
+--         vim.g.rainbow_delimiters = {
+--           strategy = {
+--             [''] = rainbow_delimiters.strategy['global'],
+--             vim = rainbow_delimiters.strategy['local'],
+--           },
+--           query = {
+--             [''] = 'rainbow-delimiters',
+--           },
+--           highlight = {
+--             'RainbowDelimiterRed',
+--             'RainbowDelimiterYellow',
+--             'RainbowDelimiterOrange',
+--             'RainbowDelimiterGreen',
+--             'RainbowDelimiterBlue',
+--             'RainbowDelimiterCyan',
+--             'RainbowDelimiterViolet',
+--           },
+--         }
+--       end
+--     },
+--  {
+--    "lukas-reineke/indent-blankline.nvim",
+--         event = { "VeryLazy" },
+--         config = function()
+-- 	      local hl_name_list = {
+--         'RainbowDelimiterRed',
+--         'RainbowDelimiterYellow',
+--         'RainbowDelimiterOrange',
+--         'RainbowDelimiterGreen',
+--         'RainbowDelimiterBlue',
+--         'RainbowDelimiterCyan',
+--         'RainbowDelimiterViolet',
+--       }
+--             require('ibl').setup({
+-- 		    scope = {
+-- 			    enabled = true,
+-- 			    show_start = false,
+-- 			    highlight = hl_name_list
+-- 	    }
+--     })
+--         end
+-- },
+	{
+	    'windwp/nvim-autopairs',
+	    event = "InsertEnter",
+	    opts = {} -- this is equalent to setup({}) function
+	},
 }
-
-
