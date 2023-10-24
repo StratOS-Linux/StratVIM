@@ -1,3 +1,9 @@
+return {
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+  dependencies = { {'nvim-tree/nvim-web-devicons'}},
+  config = function()
+    
 local db = require("dashboard")
 
 db.setup {
@@ -52,7 +58,7 @@ preview = {
 	      key = '2',
 	      keymap = '',
 	      key_hl = 'Number',
-	      action = ':edit ~/.config/nvim/lua/config/plugins.lua'
+	      action = ':edit ~/.config/nvim/lua/config/plugins.lua' -- TODO: this needs tobe changed
       },
       {
         icon = '  ',
@@ -99,4 +105,6 @@ preview = {
   },
   footer = {"","","Made with ♥  by LUGVITC"}
     },
+}
+	end
 }
