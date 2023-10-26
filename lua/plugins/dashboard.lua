@@ -48,7 +48,7 @@ preview = {
 	key = '1',
 	keymap = '',
 	key_hl = 'Number',
-	action = ':edit ~/.config/nvim/lua/config/dashboard-config.lua'
+	action = ':edit ~/.config/nvim/lua/plugins/dashboard.lua'
       },
       {
 	      icon = '  ',
@@ -58,7 +58,7 @@ preview = {
 	      key = '2',
 	      keymap = '',
 	      key_hl = 'Number',
-	      action = ':edit ~/.config/nvim/lua/config/plugins.lua' -- TODO: this needs tobe changed
+	      action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.7}}) search_dirs = '/home/$USER/.config/nvim/lua/plugins'", -- TODO: this needs tobe changed
       },
       {
         icon = '  ',
@@ -96,6 +96,15 @@ preview = {
 	      key_hl = 'Number',
 	      action = ":Lazy",
       },
+	{
+		icon='󰽛  ',
+		icon_hl="Title",
+		desc = "Open README",
+		desc_hl = "String",
+		key = '7',
+		key_hl = 'Number',
+		action = ":edit ~/.config/nvim/README.md"
+	},
 
 },
   hide={
