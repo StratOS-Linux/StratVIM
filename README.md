@@ -29,4 +29,24 @@
 
 - Terminal support in nvim using [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 
+- LSP support
+
 - And much more !
+
+## Installation
+
+- ### Download neovim(version 0.7 or above) and npm
+
+*For Ubuntu (Version 22.10 or above)*
+
+```bash
+sudo apt install npm neovim
+```
+*For Ubuntu (below version 22.10) and Debian*
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
+sudo apt install npm neovim
+```
+
