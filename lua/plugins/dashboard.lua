@@ -58,8 +58,9 @@ preview = {
 	      key = '2',
 	      keymap = '',
 	      key_hl = 'Number',
-	      action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.7}}) search_dirs = '/home/$USER/.config/nvim/lua/plugins'", -- TODO: this needs tobe changed
-      },
+	      action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.7},cwd='~/.config/nvim/lua/plugins'})", -- TODO: this needs tobe changed
+	--	      action = ":Telescope find_files search_dirs = /home/slipstream/.config/nvim/lua/plugins"
+					},
       {
         icon = '  ',
 	icon_hl = 'Title',
