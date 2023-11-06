@@ -1,4 +1,6 @@
-<img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo" align="center">
+<p align='center'>
+    <img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo">
+</p>
 
 # LUGVIM
 
@@ -29,6 +31,8 @@
 
 - Terminal support in nvim using [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 
+- Customized cmdline using [noice.nvim](https://github.com/folke/noice.nvim) 
+
 - LSP support
 
 - And much more !
@@ -50,3 +54,15 @@ sudo apt update
 sudo apt install npm neovim
 ```
 
+- ### Clone this git repository to the .config folder
+
+```bash
+git clone https://github.com/lugvitc/LUGOS-nvim-config.git ~/.config/nvim
+```
+- ### Start neovim
+
+```bash
+nvim
+```
+
+- ### Enjoy !
