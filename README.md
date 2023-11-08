@@ -25,7 +25,7 @@
 
 - Lazy loaded using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
-- Git management via [neogit](https://github.com/NeogitOrg/neogit)
+- Git management via [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 
 - Dashboard made using [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim)
 
