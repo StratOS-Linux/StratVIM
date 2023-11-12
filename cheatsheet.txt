@@ -1,0 +1,8 @@
+## nvim-tree
+Open directory tree | <C-f>
+
+## toggleterm
+Open terminal in floating window | <C-t>
+
+## markdown-preview
+Get preview of the markdown file | :MarkdownPreview
