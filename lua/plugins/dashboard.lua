@@ -9,9 +9,9 @@ local db = require("dashboard")
 db.setup {
 theme='doom',
     hide = {
-  statusline,    -- hide statusline default is true
-  tabline,       -- hide the tabline
-  winbar        -- hide winbar
+	statusline,    -- hide statusline default is true
+	tabline,       -- hide the tabline
+	winbar       -- hide winbar
 },
 preview = {
   command,       -- preview command
