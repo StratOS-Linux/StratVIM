@@ -21,7 +21,11 @@
 
 ## Features
 
-- Default theme - [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
+- Default theme - [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
+
+- Secondary theme - [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
+
+- Theme switching using [themery.nvim](https://github.com/zaldih/themery.nvim)
 
 - Lazy loaded using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
