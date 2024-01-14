@@ -2,7 +2,7 @@
     <img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo">
 </p>
 
-# LUGVIM
+# StratVIM
 
 ## Screenshots
 
