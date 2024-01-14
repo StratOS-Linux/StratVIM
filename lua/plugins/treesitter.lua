@@ -10,7 +10,8 @@ return {
 		  "RRethy/nvim-treesitter-textsubjects",
     },
 		config = function ()
-			local treesitter = require("nvim-treesitter.configs")
+			--	local treesitter = require("nvim-treesitter.configs")
+			local treesitter = require('ts_context_commentstring')
 
 			treesitter.setup({
 				highlight = {
@@ -44,6 +45,7 @@ return {
 					"dockerfile",
 					"gitignore",
 					"query",
+					"java",
 				},
 				incremental_selection = {
 					enable = true,

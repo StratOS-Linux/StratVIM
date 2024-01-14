@@ -7,13 +7,13 @@
 ## Screenshots
 
 ### Dashboard
-<img src="images/LUGVIM.png">
+<img src="images/STRATVIM.png">
 
 ## About
 
-- This repo contains LUGVIM, the nvim config for LUGOS.
+- This repo contains STRATVIM, the nvim config for StratOS.
 
-- Meant for use in [LUGOS](https://github.com/lugvitc/LUG_custom_distro) (A Bedrock-derived distro made by the Linux Club OS Team)
+- Meant for use in [StratOS](https://github.com/lugvitc/LUG_custom_distro) (A Bedrock-derived distro made by the Linux Club OS Team)
 
 - For further info on how to contribute to this project,refer to [CONTRIBUTING.md](CONTRIBUTING.md)
 
