@@ -87,11 +87,11 @@ preview = {
       {
 	      icon = '☁  ',
               icon_hl = 'Title',
-	      desc = 'Our Club Website',
+	      desc = 'Modify Editor Tooling',
 	      desc_hl = 'String',
 	      key = '5',
 	      key_hl = 'Number',
-	      action = ':exe ":silent !open lugvitc.org"',
+	      action = ':Mason',
       },
       {
 	      icon = '  ',

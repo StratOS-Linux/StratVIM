@@ -11,10 +11,14 @@ return
 					name='gruvbox',
 					colorscheme='gruvbox'
 				},
-					{
-						name='cyberdream',
-						colorscheme='cyberdream'
-					}},
+				{
+					name='tokyonight',
+					colorscheme='tokyonight',
+				},
+				{
+					name='cyberdream',
+					colorscheme='cyberdream'
+				}},
 				themeConfigFile = "~/.config/nvim/init.lua",
 				livePreview=true,
 				
