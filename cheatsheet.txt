@@ -6,3 +6,9 @@ Open terminal in floating window | <C-t>
 
 ## markdown-preview
 Get preview of the markdown file | :MarkdownPreview
+
+## LazyGit
+Open LazyGit in current git directory | <C-l>
+
+## CheatSheet
+Open CheatSheet | <C-h>
