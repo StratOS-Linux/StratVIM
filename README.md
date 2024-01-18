@@ -21,10 +21,6 @@
 
 ## Features
 
-- Default theme - [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
-
-- Secondary theme - [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
-
 - Theme switching using [themery.nvim](https://github.com/zaldih/themery.nvim)
 
 - Lazy loaded using [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -70,7 +66,7 @@ sudo install lazygit /usr/local/bin
 - ### Clone this git repository to the .config folder
 
 ```bash
-git clone https://github.com/lugvitc/LUGOS-nvim-config.git ~/.config/nvim
+git clone https://github.com/lugvitc/StratVIM.git ~/.config/nvim
 ```
 - ### Start neovim
 
