@@ -5,4 +5,7 @@ return{
             "nvim-lua/plenary.nvim",
         },
 	cmds={'lazygit'},
+	keys={
+		 { "<C-l>", "<cmd>:LazyGit<CR>", desc = "NvimTree" },
+	}
     }
