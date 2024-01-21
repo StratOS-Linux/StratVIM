@@ -78,7 +78,7 @@ preview = {
 		{
 	      icon = '  ',
               icon_hl = 'Title',
-	      desc = 'Change LUGVIM Theme',
+	      desc = 'Change StratVIM Theme',
 	      desc_hl = 'String',
 	      key = '4',
 	      key_hl = 'Number',
