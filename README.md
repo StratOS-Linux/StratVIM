@@ -40,21 +40,28 @@
 ## Installation
 
 - ### Download neovim(version 0.7 or above) and npm
-
 *For Ubuntu (Version 22.10 or above)*
 
 ```bash
-sudo apt install npm neovim
+sudo apt install npm neovim xclip
 ```
 *For Ubuntu (below version 22.10) and Debian*
 
 ```bash
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
-sudo apt install npm neovim 
+sudo apt install npm neovim xclip
+```
+*For Fedora*
+```bash
+sudo dnf install npm neovim xclip
 ```
 
-- ### Download lazygit
+*For Arch*
+```bash
+sudo pacman -S npm neovim xclip lazygit
+```
+- ### Download lazygit (Fedora and Ubuntu)
 
 ```bash
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
