@@ -3,7 +3,7 @@ return {
  dependencies={{ 'nvim-lualine/lualine.nvim'}},
  config=function()
 	 require('lualine').setup{
-		 options={theme = 'horizon'}
+		 options={theme = 'auto'}
 	 }
 end
 }
