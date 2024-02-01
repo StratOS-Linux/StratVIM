@@ -1,5 +1,5 @@
 <p align='center'>
-    <img title="" src="https://i.imgur.com/Kq4ER0L.png" alt="Linux Club Logo">
+<!-- Put the new logo of StratOS here -->
 </p>
 
 # StratVIM
@@ -13,7 +13,7 @@
 
 - This repo contains STRATVIM, the nvim config for StratOS.
 
-- Meant for use in [StratOS](https://github.com/lugvitc/LUG_custom_distro) (A Bedrock-derived distro made by the Linux Club OS Team)
+- Meant for use in [StratOS](https://github.com/StratOS-Linux/LUG_custom_distro)
 
 - For further info on how to contribute to this project,refer to [CONTRIBUTING.md](CONTRIBUTING.md)
 
