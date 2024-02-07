@@ -5,6 +5,8 @@ return {
   config = function()
     
 local db = require("dashboard")
+local stats = require("lazy").stats()
+local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
 
 db.setup {
 theme='doom',
@@ -113,8 +115,8 @@ preview = {
 	  tabline,
 	  winbar
   },
-  footer = {"","","Made with ♥  by the StratOS Team"}
+  footer = {"","Loaded " .. stats.loaded ..  " plugins in " .. ms .. "ms" ,"","Made with ♥  by the StratOS Team"}
     },
 }
-	end
+end
 }

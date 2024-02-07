@@ -10,7 +10,7 @@ return {
 		  "RRethy/nvim-treesitter-textsubjects",
     },
 		config = function ()
-			--	local treesitter = require("nvim-treesitter.configs")
+			--	local treesitter = require("nvim-treesitter.configs") -- (has been deprecated)
 			local treesitter = require('ts_context_commentstring')
 
 			treesitter.setup({
