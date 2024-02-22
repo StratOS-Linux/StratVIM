@@ -71,7 +71,7 @@ preview = {
 	key = '3',
 	key_hl = 'Number',
 	action = ':edit ~/.config/nvim/init.lua',
-      },   
+      },
 		{
 	      icon = '  ',
               icon_hl = 'Title',
@@ -82,7 +82,8 @@ preview = {
 	      action = ':Themery',
 		},
       {
-	      icon = '☁  ',
+	--      icon = '☁  ',
+			icon = "  ",
               icon_hl = 'Title',
 	      desc = 'Modify Editor Tooling',
 	      desc_hl = 'String',
@@ -115,8 +116,8 @@ preview = {
 	  tabline,
 	  winbar
   },
-  footer = {"","Loaded " .. stats.loaded ..  " plugins in " .. ms .. "ms" ,"","Made with ♥  by the StratOS Team"}
+  footer = {"","StratVIM loaded " .. stats.loaded ..  " plugins in " .. ms .. "ms" ,"","Made with ♥  by the StratOS Team"}
     },
 }
-end
+	end
 }

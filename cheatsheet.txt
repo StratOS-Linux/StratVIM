@@ -12,3 +12,9 @@ Open LazyGit in current git directory | <C-l>
 
 ## CheatSheet
 Open CheatSheet | <C-h>
+
+## Comment
+Toggle comment on a line | gcc
+Toggle comment on a block | gbc
+Comment out line | gc
+Comment out block | gb
