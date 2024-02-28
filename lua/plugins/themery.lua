@@ -20,17 +20,12 @@ return
 					colorscheme='cyberdream'
 				},
 				{
-					name='nightfox',
-					colorscheme='nightfox',
-				},
-				{
 					name='duskfox',
 					colorscheme='duskfox',
 				}
 			},
 				themeConfigFile = "~/.config/nvim/init.lua",
 				livePreview=true,
-				
 			})
 		end
 }

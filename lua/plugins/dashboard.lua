@@ -69,7 +69,7 @@ preview = {
 	key = '3',
 	key_hl = 'Number',
 	action = ':edit ~/.config/nvim/init.lua',
-      },   
+      },
 		{
 	      icon = '  ',
               icon_hl = 'Title',
@@ -80,7 +80,8 @@ preview = {
 	      action = ':Themery',
 		},
       {
-	      icon = '☁  ',
+	--      icon = '☁  ',
+			icon = "  ",
               icon_hl = 'Title',
 	      desc = 'Modify Editor Tooling',
 	      desc_hl = 'String',
@@ -113,7 +114,17 @@ preview = {
 	  tabline,
 	  winbar
   },
-  footer = {"","","Made with ♥  by the StratOS Team"}
+  --footer = {"","" ,"","Made with ♥  by the StratOS Team"}
+footer = function()
+  local info = {}
+  local fortune = require('fortune').get_fortune()
+  info[1] =" "
+  info[2] = " "
+  info[3] = "Made with ♥  by the StratOS Team"
+  local footer = vim.list_extend(info,fortune)
+  return footer
+  end
+
     },
 }
 	end
