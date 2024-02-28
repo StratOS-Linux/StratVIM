@@ -115,15 +115,15 @@ preview = {
 	  winbar
   },
   --footer = {"","" ,"","Made with ♥  by the StratOS Team"}
-footer = function()
-  local info = {}
-  local fortune = require('fortune').get_fortune()
-  info[1] =" "
-  info[2] = " "
-  info[3] = "Made with ♥  by the StratOS Team"
-  local footer = vim.list_extend(info,fortune)
-  return footer
-  end
+	footer = function()
+		local info = {}
+		local fortune = require('fortune').get_fortune()
+		info[1] =" "
+		info[2] = " "
+		info[3] = "Made with ♥  by the StratOS Team"
+		local footer = vim.list_extend(info,fortune)
+		return footer
+	end
 
     },
 }
