@@ -18,3 +18,9 @@ Toggle comment on a line | gcc
 Toggle comment on a block | gbc
 Comment out line | gc
 Comment out block | gb
+
+## Github CLI
+To view Github CLI commands to use | :GH
+
+## Pandoc
+To convert current file to pdf | :Pandoc
