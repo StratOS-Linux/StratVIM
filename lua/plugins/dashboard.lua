@@ -5,8 +5,6 @@ return {
   config = function()
     
 local db = require("dashboard")
-local stats = require("lazy").stats()
-local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
 
 db.setup {
 theme='doom',
@@ -116,7 +114,17 @@ preview = {
 	  tabline,
 	  winbar
   },
-  footer = {"","StratVIM loaded " .. stats.loaded ..  " plugins in " .. ms .. "ms" ,"","Made with ♥  by the StratOS Team"}
+  --footer = {"","" ,"","Made with ♥  by the StratOS Team"}
+footer = function()
+  local info = {}
+  local fortune = require('fortune').get_fortune()
+  info[1] =" "
+  info[2] = " "
+  info[3] = "Made with ♥  by the StratOS Team"
+  local footer = vim.list_extend(info,fortune)
+  return footer
+  end
+
     },
 }
 	end

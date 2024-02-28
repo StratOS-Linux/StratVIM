@@ -9,6 +9,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "cyberdream.nvim": { "branch": "main", "commit": "7b83422a9318e036ac21df6a63c0ab1ca745e54f" },
   "dashboard-nvim": { "branch": "master", "commit": "413442b12d85315fc626c44a0ce4929b213ef604" },
+  "fortune.nvim": { "branch": "master", "commit": "731b426d797fec782df3aa300995b5235fe4eef6" },
   "friendly-snippets": { "branch": "main", "commit": "dbd45e9ba76d535e4cba88afa1b7aa43bb765336" },
   "gh.nvim": { "branch": "main", "commit": "d31948c4fbe77103b51c7fea6391d69b9c2d00b5" },
   "gruvbox.nvim": { "branch": "main", "commit": "6e4027ae957cddf7b193adfaec4a8f9e03b4555f" },
