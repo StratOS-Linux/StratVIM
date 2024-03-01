@@ -59,7 +59,6 @@ preview = {
 	      keymap = '',
 	      key_hl = 'Number',
 	      action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.7},cwd='~/.config/nvim/lua/plugins'})", -- TODO: this needs tobe changed
-	--	      action = ":Telescope find_files search_dirs = /home/slipstream/.config/nvim/lua/plugins"
 					},
       {
         icon = '  ',
@@ -114,7 +113,6 @@ preview = {
 	  tabline,
 	  winbar
   },
-  --footer = {"","" ,"","Made with ♥  by the StratOS Team"}
 	footer = function()
 		local info = {}
 		local fortune = require('fortune').get_fortune()
