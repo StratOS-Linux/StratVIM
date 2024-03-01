@@ -21,7 +21,7 @@
 
 ## Features
 
-- Theme switching using [themery.nvim](https://github.com/zaldih/themery.nvim)
+- Theme switching using [huez.nvim](https://github.com/vague2k/huez.nvim)
 
 - Lazy loaded using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
