@@ -3,6 +3,7 @@ return {
     config = function()
       require('fortune').setup {
         max_width = 60,
+		content_type = 'quotes'
       }
     end
   }
