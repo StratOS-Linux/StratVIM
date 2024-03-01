@@ -14,6 +14,7 @@
   "gh.nvim": { "branch": "main", "commit": "d31948c4fbe77103b51c7fea6391d69b9c2d00b5" },
   "gruvbox.nvim": { "branch": "main", "commit": "6e4027ae957cddf7b193adfaec4a8f9e03b4555f" },
   "gx.nvim": { "branch": "main", "commit": "78070bbd8e7e15a1623cdd6832a9529d2ee63e0c" },
+  "huez.nvim": { "branch": "main", "commit": "cc18cb58572ecb0ac4d0da3e2e8720d58b79bafc" },
   "indent-blankline.nvim": { "branch": "master", "commit": "821a7acd88587d966f7e464b0b3031dfe7f5680c" },
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
   "lazygit.nvim": { "branch": "main", "commit": "1e08e3f5ac1152339690140e61a4a32b3bdc7de5" },
