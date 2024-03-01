@@ -17,7 +17,7 @@ return {
         },
       },
     })
-
+	 telescope.load_extension('themes')
     -- telescope.load_extension("fzf")
 
     -- set keymaps
@@ -32,5 +32,6 @@ return {
       { "nvim-lua/plenary.nvim" },
       { "cljoly/telescope-repo.nvim" },
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+	  {'andrew-george/telescope-themes'},
     },
 }

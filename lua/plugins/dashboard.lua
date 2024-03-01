@@ -33,12 +33,12 @@ preview = {
       {
         icon = '  ',
         icon_hl = 'Title',
-        desc = 'Find File',
+        desc = 'Find Recent Files',
         desc_hl = 'String',
         key = '0',
         keymap = '',
         key_hl = 'Number',
-        action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.9}})",
+        action = ":lua require('telescope.builtin').oldfiles({layout_strategy='vertical',layout_config={width=0.9}})",
       },
      {
 	icon = '  ',
@@ -77,7 +77,7 @@ preview = {
 	      desc_hl = 'String',
 	      key = '4',
 	      key_hl = 'Number',
-	      action = ':Themery',
+	      action = ':Huez',
 		},
       {
 	--      icon = '☁  ',
