@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ["$(command -v apt)"] && [ "$(lsb_release -rs | cut -d " " -f1)" -gt 22.04]; then
+if [ "$(command -v apt)" ] && [ "$(lsb_release -rs | cut -d " " -f1)" -gt 22.04 ]; then
 	echo "Ubuntu version above 22.04 detected"
 	echo "Installing dependencies"
 	sudo apt-get update
@@ -31,7 +31,7 @@ elif [ "$(command -v apt)"] && [-f "/etc/debian_version"]; then
 	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 	tar xf lazygit.tar.gz lazygit
 	sudo install lazygit /usr/local/bin
-elif ["$(command -v dnf)"] && [-f "/etc/fedora-release"]; then
+elif [ "$(command -v dnf)" ] && [ -f "/etc/fedora-release" ]; then
 	echo "Fedora Linux detected"
 	echo "Installing dependencies"
 	sudo dnf install npm neovim xclip gh pandoc git
@@ -39,13 +39,13 @@ elif ["$(command -v dnf)"] && [-f "/etc/fedora-release"]; then
 	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 	tar xf lazygit.tar.gz lazygit
 	sudo install lazygit /usr/local/bin
-elif ["$(command -v pacman)"] && [-f "/etc/arch-release"]; then
+elif [ "$(command -v pacman)" ] && [ -f "/etc/arch-release" ]; then
 	echo "Arch Linux detected"
 	echo "Installing dependencies"
 	sudo pacman -S npm neovim xclip github-cli lazygit pandoc git
 fi
 
-if [-f '~/.config/nvim']; then
+if [ -f "~/.config/nvim" ]; then
 	echo "Existing neovim configuration detected"
 	echo "Moving it to ~/.config/nvim.bak"
 	mv ~/.config/nvim ~/.config/nvim.bak
