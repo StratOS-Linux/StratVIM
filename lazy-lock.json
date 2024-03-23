@@ -44,6 +44,7 @@
   "pomodoro.nvim": { "branch": "main", "commit": "e822aa50f2d1606a54570f7448954fc6ef325dd9" },
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "4d2d3f9c16438e0de284149ed7edbc2465aab34c" },
+  "reactive.nvim": { "branch": "main", "commit": "c7089808d30ca5c1bfd42eb57d2c3fc43e815190" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "6c921ca12321edaa773e324ef64ea301a1d0da62" },
   "telescope-repo.nvim": { "branch": "master", "commit": "e17462610fb936bc8a8cc12a249c3252156dd6f7" },
   "telescope-themes": { "branch": "main", "commit": "cc6ae4304ab442843830561b774aa16758ca2b1e" },
