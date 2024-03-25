@@ -10,9 +10,6 @@ Get preview of the markdown file | :MarkdownPreview
 ## LazyGit
 Open LazyGit in current git directory | <C-l>
 
-## CheatSheet
-Open CheatSheet | <C-h>
-
 ## Comment
 Toggle comment on a line | gcc
 Toggle comment on a block | gbc
