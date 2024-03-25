@@ -119,7 +119,7 @@ preview = {
 		local fortune = require('fortune').get_fortune()
 		info[1] =" "
 		info[2] = " "
-		info[3] = "Made with ♥  by the StratOS Team"
+		info[3] = "Made with   by the StratOS Team"
 		local footer = vim.list_extend(info,fortune)
 		return footer
 	end
