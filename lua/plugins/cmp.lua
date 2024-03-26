@@ -7,6 +7,7 @@ return {
     "L3MON4D3/LuaSnip", -- snippet engine
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
+	"chrisgrieser/cmp-nerdfont" --nerdfonts
   },
   config = function()
     local cmp = require("cmp")
@@ -40,6 +41,7 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "luasnip" }, -- snippets
         { name = "path" }, -- file system paths
+		{ name = "nerdfont" },
       }),
 	  confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -47,6 +49,9 @@ return {
 	  },
 	  window = {
 		documentation = cmp.config.window.bordered(),
+		completion = {
+			border = 'rounded',
+		}
 	  },
 	  experimental = {
 		ghost_text = false,
