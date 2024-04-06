@@ -1,6 +1,6 @@
 return {
         "nvim-neorg/neorg",
-        dependencies = { "luarocks.nvim" },
+        dependencies = { {"luarocks.nvim"},{"nvim-neorg/neorg-telescope"} },
         -- put any other flags you wanted to pass to lazy here!
 		lazy = false,
 		version = "*",
