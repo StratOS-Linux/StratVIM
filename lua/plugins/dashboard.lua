@@ -3,7 +3,6 @@ return {
   event = 'VimEnter',
   dependencies = { {'nvim-tree/nvim-web-devicons'}},
   config = function()
-    
 local db = require("dashboard")
 
 db.setup {
@@ -123,7 +122,6 @@ preview = {
 		local footer = vim.list_extend(info,fortune)
 		return footer
 	end
-
     },
 }
 	end

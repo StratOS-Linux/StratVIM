@@ -33,5 +33,6 @@ return {
       { "cljoly/telescope-repo.nvim" },
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
 	  {'andrew-george/telescope-themes'},
+	   { "nvim-telescope/telescope-github.nvim" },
     },
 }
