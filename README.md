@@ -21,7 +21,7 @@
 
 ## Features
 
-- Theme switching using [huez.nvim](https://github.com/vague2k/huez.nvim)
+- Theme switching using [telescope-themes](https://github.com/andrew-george/telescope-themes)
 
 - Lazy loaded using [lazy.nvim](https://github.com/folke/lazy.nvim)
 

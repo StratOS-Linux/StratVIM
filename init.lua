@@ -1,7 +1,5 @@
 require("core")
 require("lazy-nvim")
+require("current-theme")
 
--- Configuring coloscheme
-local colorscheme = require("huez.api").get_colorscheme()
-vim.cmd("colorscheme " .. colorscheme)
 

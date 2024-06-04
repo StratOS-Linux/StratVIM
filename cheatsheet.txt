@@ -21,3 +21,6 @@ To view Github CLI commands to use | :GH
 
 ## Pandoc
 To convert current file to pdf | :Pandoc
+
+## Theming
+Change StratVIM theme| <leader> t h
