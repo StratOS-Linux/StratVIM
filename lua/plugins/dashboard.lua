@@ -85,7 +85,7 @@ preview = {
 	      desc_hl = 'String',
 	      key = '5',
 	      key_hl = 'Number',
-	      action = ':Huez',
+	      action = ':Telescope themes',
 		},
       {
 	--      icon = '☁  ',
