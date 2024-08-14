@@ -19,7 +19,7 @@ require("lazy").setup({
 },
 	{
 		install = {
-			colorscheme = { "oxocarbon",'gruvbox' }
+				-- colorscheme = { "oxocarbon",'gruvbox' }
 		},
 		change_detection = {
 			notify = false

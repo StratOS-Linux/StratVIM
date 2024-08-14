@@ -81,4 +81,15 @@ git clone https://github.com/lugvitc/StratVIM.git ~/.config/nvim
 nvim
 ```
 
+- ### Install pywal (optional, for using [pywal16.nvim](https://github.com/uZer/pywal16.nvim))
+
+    - **Via pip :** 
+    ```bash
+        pip install pywal
+   ```
+   - **For Arch Linux :**
+   ```bash
+       sudo pacman -S python-pywal
+   ```
+
 - ### Enjoy !
