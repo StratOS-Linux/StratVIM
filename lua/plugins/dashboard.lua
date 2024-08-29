@@ -4,6 +4,10 @@ return {
 	dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	config = function()
 		local db = require("dashboard")
+		local config_path = vim.fn.stdpath("config")
+		local plugin_path = config_path .. '/lua/plugins/'
+		local dashboard_file = config_path .. '/lua/plugins/dashboard.lua'
+		local initpath = config_path .. '/init.lua'
 
 		db.setup({
 			theme = "doom",
@@ -62,7 +66,7 @@ return {
 						key = "2",
 						keymap = "",
 						key_hl = "Number",
-						action = ":edit ~/.config/nvim/lua/plugins/dashboard.lua",
+						action = ":edit" .. dashboard_file,
 					},
 					{
 						icon = "  ",
@@ -72,7 +76,9 @@ return {
 						key = "3",
 						keymap = "",
 						key_hl = "Number",
-						action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.7},cwd='$HOME/.config/nvim/lua/plugins'})", -- TODO: this needs tobe changed
+						action = ":lua require('telescope.builtin').find_files({layout_strategy='vertical',layout_config={width=0.7},cwd=[["
+							.. plugin_path
+							.. "]]})",
 					},
 					{
 						icon = "  ",
@@ -81,7 +87,7 @@ return {
 						desc_hl = "String",
 						key = "4",
 						key_hl = "Number",
-						action = ":edit ~/.config/nvim/init.lua",
+						action = ":edit" .. initpath,
 					},
 					{
 						icon = "  ",
@@ -93,7 +99,6 @@ return {
 						action = ":Telescope themes",
 					},
 					{
-						--      icon = '☁  ',
 						icon = "  ",
 						icon_hl = "Title",
 						desc = "Modify Editor Tooling",
