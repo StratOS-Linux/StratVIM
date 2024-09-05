@@ -73,7 +73,7 @@ sudo install lazygit /usr/local/bin
 - ### Clone this git repository to the .config folder
 
 ```bash
-git clone https://github.com/lugvitc/StratVIM.git ~/.config/nvim
+git clone https://github.com/StratOS-Linux/StratVIM.git ~/.config/nvim
 ```
 - ### Start neovim
 
