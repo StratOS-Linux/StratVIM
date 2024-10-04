@@ -1,11 +1,12 @@
 # Contributing
 
 When contributing to this repo, please describe the pull request in a simple manner and answer the queries posed by us in a polite manner. Spam pull requests will not be tolerated.
+While working on the PR, feel free to join our [discord server](https://discord.gg/u6FjX8r2) and ask doubts about the tools if you want.
 
 ## What if I do not know how to use Git or GitHub ?
 
 If you do not know how to use Git or GitHub, it is understandable as everyone has got to start somewhere.
-To learn how to use Git and GitHub, [Click Here](https://github.com/lugvitc/git-github-demo).
+To learn how to use Git and GitHub, [Click Here](https://docs.github.com/en/get-started/using-git).
 
 ## Our Pledge
 
