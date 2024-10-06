@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+# Variables
+REPO_URL="https://github.com/lugvitc/StratVIM.git"
+CONFIG_DIR="$HOME/.config/nvim"
+BACKUP_DIR="$HOME/.config/nvim.bak"
+
 # Function to install lazygit
 install_lazygit() {
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -21,42 +26,60 @@ install_github_cli() {
     sudo apt install gh -y
 }
 
-# Detect OS and install dependencies
-if command -v apt &> /dev/null && [[ "$(lsb_release -rs | cut -d "." -f1)" -ge 22 ]]; then
-    echo "Ubuntu version 22.04 or later detected"
-    echo "Installing dependencies"
+# Function to install dependencies for Debian-based systems
+install_debian_dependencies() {
     sudo apt-get update
     sudo apt-get install -y neovim npm xclip pandoc git
     install_github_cli
     install_lazygit
-elif command -v apt &> /dev/null && [ -f "/etc/debian_version" ]; then
-    echo "Debian or Ubuntu (below 22.04) detected"
-    echo "Installing dependencies"
-    sudo add-apt-repository ppa:neovim-ppa/unstable -y
-    sudo apt-get update
-    sudo apt-get install -y neovim npm xclip pandoc git
-    install_github_cli
-    install_lazygit
-elif command -v dnf &> /dev/null && [ -f "/etc/fedora-release" ]; then
-    echo "Fedora Linux detected"
-    echo "Installing dependencies"
+}
+
+# Function to install dependencies for Fedora
+install_fedora_dependencies() {
     sudo dnf install -y npm neovim xclip gh pandoc git
     install_lazygit
+}
+
+# Function to install dependencies for Arch Linux
+install_arch_dependencies() {
+    sudo pacman -S --noconfirm npm neovim xclip github-cli lazygit pandoc git
+}
+
+# Function to backup existing Neovim config
+backup_neovim_config() {
+    if [ -d "$CONFIG_DIR" ]; then
+        echo "Existing Neovim configuration detected"
+        echo "Moving it to $BACKUP_DIR"
+        mv "$CONFIG_DIR" "$BACKUP_DIR"
+    fi
+}
+
+# Detect OS and install dependencies
+if command -v apt &> /dev/null; then
+    if [[ "$(lsb_release -rs | cut -d "." -f1)" -ge 22 ]]; then
+        echo "Ubuntu version 22.04 or later detected"
+        install_debian_dependencies
+    else
+        echo "Debian or Ubuntu (below 22.04) detected"
+        sudo add-apt-repository ppa:neovim-ppa/unstable -y
+        install_debian_dependencies
+    fi
+elif command -v dnf &> /dev/null && [ -f "/etc/fedora-release" ]; then
+    echo "Fedora Linux detected"
+    install_fedora_dependencies
 elif command -v pacman &> /dev/null && [ -f "/etc/arch-release" ]; then
     echo "Arch Linux detected"
-    echo "Installing dependencies"
-    sudo pacman -S --noconfirm npm neovim xclip github-cli lazygit pandoc git
+    install_arch_dependencies
+else
+    echo "Unsupported OS"
+    exit 1
 fi
 
 # Backup existing Neovim config
-if [ -d "$HOME/.config/nvim" ]; then
-    echo "Existing Neovim configuration detected"
-    echo "Moving it to ~/.config/nvim.bak"
-    mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak"
-fi
+backup_neovim_config
 
 # Install StratVIM
 echo "Installing StratVIM"
-git clone https://github.com/lugvitc/StratVIM.git "$HOME/.config/nvim"
+git clone "$REPO_URL" "$CONFIG_DIR"
 
 echo "StratVIM has been installed! Enjoy!"
