@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Variables
-REPO_URL="https://github.com/lugvitc/StratVIM.git"
+REPO_URL="https://github.com/StratOS-Linux/StratVIM.git"
 CONFIG_DIR="$HOME/.config/nvim"
 BACKUP_DIR="$HOME/.config/nvim.bak"
 
@@ -54,32 +54,42 @@ backup_neovim_config() {
     fi
 }
 
-# Detect OS and install dependencies
-if command -v apt &> /dev/null; then
-    if [[ "$(lsb_release -rs | cut -d "." -f1)" -ge 22 ]]; then
-        echo "Ubuntu version 22.04 or later detected"
-        install_debian_dependencies
-    else
-        echo "Debian or Ubuntu (below 22.04) detected"
-        sudo add-apt-repository ppa:neovim-ppa/unstable -y
-        install_debian_dependencies
-    fi
-elif command -v dnf &> /dev/null && [ -f "/etc/fedora-release" ]; then
-    echo "Fedora Linux detected"
-    install_fedora_dependencies
-elif command -v pacman &> /dev/null && [ -f "/etc/arch-release" ]; then
-    echo "Arch Linux detected"
-    install_arch_dependencies
-else
-    echo "Unsupported OS"
-    exit 1
-fi
+os_detect() {
+	# Detect OS and install dependencies
+	if command -v apt &> /dev/null; then
+		if [[ "$(lsb_release -rs | cut -d "." -f1)" -ge 22 ]]; then
+			echo "Ubuntu version 22.04 or later detected"
+			install_debian_dependencies
+		else
+			echo "Debian or Ubuntu (below 22.04) detected"
+			sudo add-apt-repository ppa:neovim-ppa/unstable -y
+			install_debian_dependencies
+		fi
+	elif command -v dnf &> /dev/null && [ -f "/etc/fedora-release" ]; then
+		echo "Fedora Linux detected"
+		install_fedora_dependencies
+	elif command -v pacman &> /dev/null && [ -f "/etc/arch-release" ]; then
+		echo "Arch Linux detected"
+		install_arch_dependencies
+	else
+		echo "Unsupported OS"
+		exit 1
+	fi
+}
 
-# Backup existing Neovim config
-backup_neovim_config
 
-# Install StratVIM
-echo "Installing StratVIM"
-git clone "$REPO_URL" "$CONFIG_DIR"
+clone_repo() {
+	# Install StratVIM
+	echo "Installing StratVIM"
+	git clone "$REPO_URL" "$CONFIG_DIR"
 
-echo "StratVIM has been installed! Enjoy!"
+	echo "StratVIM has been installed! Enjoy!"
+}
+
+main() {
+	os_detect
+	backup_neovim_config
+	clone_repo
+}
+
+main
