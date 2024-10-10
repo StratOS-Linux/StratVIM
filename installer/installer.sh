@@ -10,9 +10,10 @@ BACKUP_DIR="$HOME/.config/nvim.bak"
 
 # Check internet before starting install
 check_internet() {
+	echo "$(tput bold; tput setaf 3)Checking for internet connection.........$(tput sgr0)"
 	if ping -c 1 8.8.8.8 &> /dev/null
 	then
-		echo "$(tput bold;)Success$(tput sgr0)"
+		echo "$(tput bold; tput setaf 2)Active Internet connection detected ! Starting installation......$(tput sgr0)"
 	else
 		echo "$(tput bold; tput setaf 1)You do not have an internet connection ! Connect to the internet before running this script !$(tput sgr0)"
 		exit 1
@@ -70,18 +71,18 @@ os_detect() {
 	# Detect OS and install dependencies
 	if command -v apt &> /dev/null; then
 		if [[ "$(lsb_release -rs | cut -d "." -f1)" -ge 22 ]]; then
-			echo "Ubuntu version 22.04 or later detected"
+			echo "$(tput bold; tput setaf 203)Ubuntu version 22.04 or later detected$(tput sgr0)"
 			install_debian_dependencies
 		else
-			echo "Debian or Ubuntu (below 22.04) detected"
+			echo "$(tput bold; tput setaf 1)Debian or Ubuntu (below 22.04) detected$(tput sgr0)"
 			sudo add-apt-repository ppa:neovim-ppa/unstable -y
 			install_debian_dependencies
 		fi
 	elif command -v dnf &> /dev/null && [ -f "/etc/fedora-release" ]; then
-		echo "Fedora Linux detected"
+		echo "$(tput bold; tput setaf 12)Fedora Linux detected$(tput sgr0)"
 		install_fedora_dependencies
 	elif command -v pacman &> /dev/null && [ -f "/etc/arch-release" ]; then
-		echo "Arch Linux detected"
+		echo "$(tput bold; tput setaf 14)Arch Linux detected$(tput sgr0)"
 		install_arch_dependencies
 	else
 		echo "Unsupported OS"
