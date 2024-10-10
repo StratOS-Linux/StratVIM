@@ -7,6 +7,18 @@ REPO_URL="https://github.com/StratOS-Linux/StratVIM.git"
 CONFIG_DIR="$HOME/.config/nvim"
 BACKUP_DIR="$HOME/.config/nvim.bak"
 
+
+# Check internet before starting install
+check_internet() {
+	if ping -c 1 8.8.8.8 &> /dev/null
+	then
+		echo "$(tput bold;)Success$(tput sgr0)"
+	else
+		echo "$(tput bold; tput setaf 1)You do not have an internet connection ! Connect to the internet before running this script !$(tput sgr0)"
+		exit 1
+	fi	
+}
+
 # Function to install lazygit
 install_lazygit() {
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -87,6 +99,7 @@ clone_repo() {
 }
 
 main() {
+	check_internet
 	os_detect
 	backup_neovim_config
 	clone_repo
