@@ -1,5 +1,8 @@
 <p align='center'>
 <!-- Put the new logo of StratOS here -->
+    <a href="https://github.com/StratOS-Linux/StratVIM/stargazers"><img src='https://img.shields.io/github/stars/StratOS-Linux/StratVIM?colorA=1d2021&colorB=5e81ac&style=for-the-badge'/></a>
+    <a href="https://github.com/StratOS-Linux/StratVIM/graphs/contributors"><img src='https://img.shields.io/github/contributors/StratOS-Linux/StratVIM?colorA=1d2021&colorB=5e81ac&style=for-the-badge'/></a>
+    <a href='https://github.com/StratOS-Linux/StratVIM/issues'><img src='https://img.shields.io/github/issues/StratOS-Linux/StratVIM?colorA=1d2021&colorB=5e81ac&style=for-the-badge'/></a>
 </p>
 
 # StratVIM
