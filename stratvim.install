@@ -1,0 +1,5 @@
+post_install() {
+  echo "==> StratVim has been installed to /etc/skel/.config/nvim"
+  echo "==> To use it, copy it to your home directory:"
+  echo "    cp -r /etc/skel/.config/nvim ~/.config/"
+}
