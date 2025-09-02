@@ -27,7 +27,12 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"pyright",
-				"clangd"
+				"clangd",
+				"black",
+				"rustfmt",
+				"google-java-format",
+				"prettierd",
+				"shellharden"
 			},
 			automatic_installation = true
 		})
