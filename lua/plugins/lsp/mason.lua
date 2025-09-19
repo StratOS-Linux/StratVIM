@@ -28,10 +28,6 @@ return {
 				"emmet_ls",
 				"pyright",
 				"clangd",
-				"black",
-				"rustfmt",
-				"google-java-format",
-				"prettierd",
 				"shellharden"
 			},
 			automatic_installation = true
