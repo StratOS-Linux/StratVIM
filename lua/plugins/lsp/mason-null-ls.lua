@@ -16,6 +16,9 @@ return {
 				"prettierd",
 				"rustfmt",
 				"gopls",
+				"tex-fmt",
+				"deno_fmt",
+				"yaml_fmt",
 			},
 		})
 	end,

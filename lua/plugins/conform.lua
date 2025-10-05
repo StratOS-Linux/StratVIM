@@ -14,6 +14,9 @@ return {
 				java = { "google-java-format" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				sh = { "shellharden" },
+				tex = { "tex-fmt" },
+				json = { "deno_fmt" },
+				yaml = { "yaml_fmt" },
 			},
 		})
 		vim.api.nvim_create_autocmd("BufWritePre", {
