@@ -12,9 +12,9 @@ return {
 				icons = {
 					package_installed = "✓",
 					package_pending = "➜",
-					package_uninstalled = "✗"
-				}
-			}
+					package_uninstalled = "✗",
+				},
+			},
 		})
 
 		mason_lspconfig.setup({
@@ -28,9 +28,8 @@ return {
 				"emmet_ls",
 				"pyright",
 				"clangd",
-				"shellharden"
 			},
-			automatic_installation = true
+			automatic_installation = true,
 		})
-	end
+	end,
 }
